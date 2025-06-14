@@ -27,6 +27,6 @@ For full project implementations and personal commentary on each lab, see the ma
 >
 > All credit for the curriculum, lab structure, and linked resources goes to the original authors.
 
-Return to the main project: [Terraform Hands-On AWS – 70+ Labs README](https://github.com/JThomas404/terraform-hands-on-aws-70-labs/blob/main/README.md)
+Return to the main project: [Terraform Hands-On AWS – 70+ Labs README.md](https://github.com/JThomas404/terraform-hands-on-aws-70-labs/blob/main/README.md)
 
 ---
