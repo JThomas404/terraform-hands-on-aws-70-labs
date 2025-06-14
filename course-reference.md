@@ -1,8 +1,8 @@
 # Course Reference
 
-This file maps the course objectives, documentation, and hands-on labs for the [Terraform Hands-On AWS – 70+ Labs](https://github.com/yourusername/terraform-hands-on-aws-70-labs/blob/main/README.md) project. The goal is to provide a comprehensive index aligned with the [Terraform Associate 003 exam objectives](https://developer.hashicorp.com/terraform/certification/associate).
+This file maps the course objectives, documentation, and hands-on labs for the [Terraform Hands-On AWS – 70+ Labs](https://github.com/JThomas404/terraform-hands-on-aws-70-labs/blob/main/README.md) project. The goal is to provide a comprehensive index aligned with the [Terraform Associate 003 exam objectives](https://developer.hashicorp.com/terraform/certification/associate).
 
-For full project implementations and personal commentary on each lab, see the main repository’s [README.md](https://github.com/yourusername/terraform-hands-on-aws-70-labs/blob/main/README.md).
+For full project implementations and personal commentary on each lab, see the main repository’s [README.md](https://github.com/JThomas404/terraform-hands-on-aws-70-labs/blob/main/README.md).
 
 ---
 
@@ -27,6 +27,6 @@ For full project implementations and personal commentary on each lab, see the ma
 >
 > All credit for the curriculum, lab structure, and linked resources goes to the original authors.
 
-Return to the main project: [Terraform Hands-On AWS – 70+ Labs README](https://github.com/yourusername/terraform-hands-on-aws-70-labs/blob/main/README.md)
+Return to the main project: [Terraform Hands-On AWS – 70+ Labs README](https://github.com/JThomas404/terraform-hands-on-aws-70-labs/blob/main/README.md)
 
 ---
