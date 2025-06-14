@@ -29,7 +29,7 @@ Each folder represents a category of labs aligned with specific Terraform topics
 
 This repository showcases a complete hands-on journey through Terraform’s capabilities using AWS. It documents not just implementation, but also decision-making, validation, and architecture thinking suitable for real-world cloud environments. This experience reflects readiness to manage infrastructure at scale using industry-standard tools and workflows.
 
-See [Course Reference](https://github.com/Thomas404/terraform-hands-on-aws-70-labs/blob/main/course-reference.md) for the complete outline of Terraform objectives and lab mappings from the official course, including the references (Objective / Hands-On Labs / Documentation / Quizzes) I utilised while building these labs to conceptualise Terraform.
+See [Course Reference](https://github.com/JThomas404/terraform-hands-on-aws-70-labs/blob/main/course-reference.md) for the complete outline of Terraform objectives and lab mappings from the official course, including the references (Objective / Hands-On Labs / Documentation / Quizzes) I utilised while building these labs to conceptualise Terraform.
 
 A huge thank you to Bryan and Gabe, two official HashiCorp Ambassadors, for delivering an incredibly insightful course and training that prepared me and improved my skills as a cloud engineer. I can ardently attribute much of my Terraform knowledge to these gentlemen. I highly recommend taking their course if you wish to improve your Terraform IaC skills and take them to the next level: [Course Link](https://www.udemy.com/course/terraform-hands-on-labs)
 
