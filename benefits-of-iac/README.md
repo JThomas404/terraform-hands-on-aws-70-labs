@@ -22,7 +22,7 @@ The end state of the AWS environment should look similar to the following diagra
 
 ## Real-World Business Value
 
-This lab demonstrates the foundational benefit of Infrastructure as Code—automating cloud resource provisioning across multiple availability zones with consistent configuration and teardown logic. By using Terraform to deploy AWS VPC resources, we reduce manual error, accelerate time-to-delivery, and enforce repeatability.
+This lab demonstrates the foundational benefit of Infrastructure as Code—automating cloud resource provisioning across multiple availability zones with consistent configuration and teardown logic. By using Terraform to deploy AWS VPC resources, reduce manual error, accelerate time-to-delivery, and enforce repeatability.
 
 ---
 
@@ -38,8 +38,9 @@ This lab demonstrates the foundational benefit of Infrastructure as Code—autom
 
 ```
 benefits-of-iac/
-├── main.tf
-├── variables.tf
+├── terraform/
+│   ├── main.tf
+│   └── variables.tf
 ├── README.md
 └── images/
     └── figure-1-desired-infrastructure.png
@@ -156,33 +157,11 @@ variable "vpc_cidr" {
 }
 ```
 
-### Terraform CLI Commands
-
-```bash
-export AWS_ACCESS_KEY_ID=your_access_key
-export AWS_SECRET_ACCESS_KEY=your_secret_key
-
-terraform init
-terraform apply -auto-approve
-# ... later to clean up:
-terraform destroy -auto-approve
-```
-
 ---
 
 ## Local Testing and Debugging
 
 Deployment was validated using `terraform plan` and `terraform apply`, confirming successful provisioning of all required resources. Resources were verified through the AWS Console (VPC, Subnets, IGW, NAT Gateway, and Route Tables).
-
----
-
-## Design Decisions and Highlights
-
-- **Region hardcoded** in provider block (`us-east-1`) to align with lab requirements
-- **AZs dynamically selected** via data source: `data.aws_availability_zones.available`
-- **CIDR allocation** managed using `cidrsubnet` to avoid hardcoded values
-- **IAM credentials handled securely** via environment variables instead of plaintext in code
-- **Teardown supported** via `terraform destroy` for cost management and hygiene
 
 ---
 
@@ -199,3 +178,5 @@ Deployment was validated using `terraform plan` and `terraform apply`, confirmin
 ## Conclusion
 
 This lab implements a production-grade VPC foundation using Infrastructure as Code on AWS. It reflects modern cloud engineering principles such as repeatability, modularity, and minimal human error through automation. The setup supports real-world use cases such as internet-facing and private backend applications across high-availability zones.
+
+---
