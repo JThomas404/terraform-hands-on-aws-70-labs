@@ -1,6 +1,6 @@
 # Terraform Basics
 
-All interactions with Terraform occur via the CLI. Terraform is a local tool. The Terraform ecosystem also includes providers for many cloud services, and a module repository. HashiCorp also has products to help teams manage Terraform: Terraform Cloud and Terraform Enterprise.
+All interactions with Terraform occur via the CLI. The Terraform ecosystem also includes providers for many cloud services, and a module repository. HashiCorp also has products to help teams manage Terraform: Terraform Cloud and Terraform Enterprise.
 
 # Overview
 
