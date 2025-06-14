@@ -4,6 +4,8 @@
 
 This lab demonstrates how Terraform uses its state file to track and manage infrastructure changes in a reliable and efficient manner. It walks through a scenario where an EC2 instance is added to an existing AWS VPC created in a previous lab. By showcasing the `terraform show`, `terraform plan`, and `terraform apply` workflows, the lab highlights how Terraform ensures only necessary changes are applied. This results in more consistent, safer, and faster infrastructure management.
 
+![AWS Application Infrastructure Buildout](https://github.com/JThomas404/terraform-hands-on-aws-70-labs/blob/main/benefits-of-state/images/obj-2-hcl.png?raw=true)
+
 ## Terraform State
 
 In order to properly and correctly manage infrastructure resources, Terraform stores the state of the managed infrastructure. Terraform uses this state on each execution to plan and make changes to the infrastructure. This state must be stored and maintained on each execution so future operations can perform correctly.
