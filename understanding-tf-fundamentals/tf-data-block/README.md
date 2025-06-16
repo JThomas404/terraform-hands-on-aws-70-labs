@@ -125,6 +125,4 @@ These characteristics are essential in production environments where flexibility
 
 This implementation demonstrates strong adherence to Terraform best practices. By leveraging data sources effectively, the configuration becomes intelligent, resilient, and reusable. The ability to abstract data and inject dynamic values ensures consistency across environments and minimises hardcoded risk.
 
-Real-world use case: Imagine deploying the same application stack to dev, test, and prod environments. By using data blocks to retrieve availability zones, AMI IDs, and current regions, we can maintain a single Terraform codebase and simply switch context via variables—enabling secure, scalable, and consistent multi-environment deployments.
-
 ---
