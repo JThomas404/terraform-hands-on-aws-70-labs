@@ -139,5 +139,3 @@ resource "aws_instance" "tf_mastery_ec2" {
     App   = local.application
   }
 }
-
-
