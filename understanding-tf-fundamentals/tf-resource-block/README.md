@@ -1,4 +1,4 @@
-# Terraform Resource Blocks
+# Terraform Resource Block
 
 Terraform uses resource blocks to manage infrastructure, such as virtual networks, compute instances, or higher-level components such as DNS records. Resource blocks represent one or more infrastructure objects in the Terraform configuration. Most Terraform providers have a number of different resources that map to the appropriate APIs to manage that particular infrastructure type.
 
