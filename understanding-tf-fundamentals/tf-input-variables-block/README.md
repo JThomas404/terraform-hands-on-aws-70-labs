@@ -2,9 +2,9 @@
 
 ## Overview
 
-A simple framework that this lab has taught me is "Don't repeat yourself." Variables are a fantastic way to ensure that cloud engineers or developers do not repeat themselves. They simplify and increase the usability of Terraform configurations. Input variables allow aspects of a module or configuration to be customized without altering the module's source code. This allows modules to be shared between different configurations.
+A simple framework that this lab has taught me is "Don't repeat yourself." Variables are a fantastic way to ensure that cloud engineers or developers do not repeat themselves. They simplify and increase the usability of Terraform configurations. Input variables allow aspects of a module or configuration to be customised without altering the module's source code. This allows modules to be shared between different configurations.
 
-Input variables (commonly referred to as just "variables") are often declared in a separate file called `variables.tf`, although this is not required. It is best practice to consolidate variable declarations in this file for organization and ease of management. Each variable used in a Terraform configuration must be declared before it can be used. Variables are declared in a `variable` block—one block per variable. This block includes the variable name and can optionally include additional information such as the type, description, default value, and validation rules.
+Input variables (commonly referred to as just "variables") are often declared in a separate file called `variables.tf`, although this is not required. It is best practice to consolidate variable declarations in this file for organisation and ease of management. Each variable used in a Terraform configuration must be declared before it can be used. Variables are declared in a `variable` block—one block per variable. This block includes the variable name and can optionally include additional information such as the type, description, default value, and validation rules.
 
 ## Template Syntax
 
@@ -184,7 +184,7 @@ This lab taught me how to:
 
 - Understand and use input variables in Terraform.
 - Replace hardcoded values with variables for better reusability.
-- Organize variables in a `variables.tf` file.
+- Organise variables in a `variables.tf` file.
 - Use default values to streamline provisioning.
 - Prompt variable values dynamically or via `*.tfvars` or environment variables.
 
