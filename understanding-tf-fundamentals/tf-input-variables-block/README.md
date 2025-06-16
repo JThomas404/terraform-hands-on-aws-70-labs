@@ -6,8 +6,6 @@ A simple framework that this lab has taught me is "Don't repeat yourself." Varia
 
 Input variables (commonly referred to as just "variables") are often declared in a separate file called `variables.tf`, although this is not required. It is best practice to consolidate variable declarations in this file for organisation and ease of management. Each variable used in a Terraform configuration must be declared before it can be used. Variables are declared in a `variable` block—one block per variable. This block includes the variable name and can optionally include additional information such as the type, description, default value, and validation rules.
 
-## Template Syntax
-
 ```hcl
 variable "<VARIABLE_NAME>" {
   type        = <VARIABLE_TYPE>
