@@ -14,11 +14,14 @@ Ultimately, IaC drives standardisation and consistency across the organisation, 
 
 ## Desired Infrastructure
 
-The end state of the AWS environment should look similar to the following diagram:
+<div align="center">
 
-![Desired Infrastructure](https://github.com/JThomas404/terraform-hands-on-aws-70-labs/blob/main/benefits-of-iac/images/figure-1-desired-infrastructure.png?raw=true)
+  <p>The end state of the AWS environment should look similar to the following diagram:</p>
 
---
+  <img src="https://github.com/JThomas404/terraform-hands-on-aws-70-labs/blob/main/benefits-of-iac/images/figure-1-desired-infrastructure.png?raw=true" alt="Desired Infrastructure">
+</div>
+
+---
 
 ## Real-World Business Value
 
