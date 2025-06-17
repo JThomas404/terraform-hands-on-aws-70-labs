@@ -14,9 +14,9 @@ To begin, I created a new module directory and wrote the following configuration
 
 1. **Module Directory:**
 
-   ```bash
-   mkdir -p /workspace/terraform/server
-   ```
+```bash
+mkdir -p /workspace/terraform/server
+```
 
 2. **Module Configuration (\*\***`server/server.tf`\***\*):**
 
