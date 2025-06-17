@@ -278,7 +278,7 @@ resource "aws_instance" "tf_mastery_ec2" {
 
 Verify application by visiting:
 
-```http
+```
 http://54.227.176.21
 ```
 
