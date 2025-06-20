@@ -73,7 +73,7 @@ This separation enhances reproducibility, reduces configuration drift, and align
 
 ## Conclusion
 
-Through this lab, I validated how Terraform assigns variable values from different sources and the order in which they are evaluated. Each configuration change was tested using `terraform plan` to ensure accuracy.
+Through this lab, I validated how Terraform assigns variable values from different sources and the order in which they are evaluated. Each configuration change was tested using a `terraform plan` to ensure accuracy.
 
 This practical work demonstrates my ability to:
 
