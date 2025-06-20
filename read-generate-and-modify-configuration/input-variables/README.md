@@ -8,9 +8,9 @@ This project documents my direct implementation and testing of Terraform input v
 
 The following hierarchy illustrates how Terraform determines which value to assign when multiple sources are defined for a variable:
 
-<p align="center">
+<div align="center">
 
-```text
+```
 ↓ Order of Precedence (Lowest to Highest)
 
 +---------------------------------------------+
@@ -28,7 +28,7 @@ The following hierarchy illustrates how Terraform determines which value to assi
 +---------------------------------------------+
 ```
 
-</p>
+</div>
 
 ## Setting Variable Values via Environment Variables
 
