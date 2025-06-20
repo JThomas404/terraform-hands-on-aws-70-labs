@@ -9,21 +9,21 @@ This project documents my direct implementation and testing of Terraform input v
 The following hierarchy illustrates how Terraform determines which value to assign when multiple sources are defined for a variable:
 
 <pre>
-                    ↓ Order of Precedence (Lowest to Highest)
+                                         ↓ Order of Precedence (Lowest to Highest)
 
-                    +---------------------------------------------+
-                    |             Variable defaults               |
-                    +---------------------------------------------+
-                    |           Environment Variables             |
-                    +---------------------------------------------+
-                    |           terraform.tfvars file             |
-                    +---------------------------------------------+
-                    |         terraform.tfvars.json file          |
-                    +---------------------------------------------+
-                    |    *.auto.tfvars or *.auto.tfvars.json      |
-                    +---------------------------------------------+
-                    | Command Line: -var and --var-file (Highest) |
-                    +---------------------------------------------+
+                                      +---------------------------------------------+
+                                      |             Variable defaults               |
+                                      +---------------------------------------------+
+                                      |           Environment Variables             |
+                                      +---------------------------------------------+
+                                      |           terraform.tfvars file             |
+                                      +---------------------------------------------+
+                                      |         terraform.tfvars.json file          |
+                                      +---------------------------------------------+
+                                      |    *.auto.tfvars or *.auto.tfvars.json      |
+                                      +---------------------------------------------+
+                                      | Command Line: -var and --var-file (Highest) |
+                                      +---------------------------------------------+
 </pre>
 
 ## Setting Variable Values via Environment Variables
@@ -71,15 +71,15 @@ This separation enhances reproducibility, reduces configuration drift, and align
 
 ## Conclusion
 
-Through this lab, I validated how Terraform assigns variable values from different sources and the order in which they are evaluated. Each configuration change was tested using `terraform plan` to ensure accuracy.
+Through this implementation, I validated how Terraform assigns variable values from different sources and the order in which they are evaluated. Each configuration change was tested using `terraform plan` to ensure accuracy.
 
-This practical work demonstrates my ability to:
+This work demonstrates my ability to:
 
 - Implement secure, flexible input variable strategies
 - Maintain infrastructure across multiple environments
 - Apply reproducible and intentional configurations
 - Troubleshoot and audit input precedence behaviors
 
-These skills are essential for delivering reliable and modular cloud infrastructure at scale.
+These capabilities are essential for delivering scalable and reliable cloud infrastructure systems.
 
 ---
