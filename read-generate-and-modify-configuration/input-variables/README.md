@@ -8,26 +8,23 @@ This project documents my direct implementation and testing of Terraform input v
 
 The following hierarchy illustrates how Terraform determines which value to assign when multiple sources are defined for a variable:
 
-<p align="center">
-<pre>
+<pre style="text-align: center; display: table; margin: 0 auto;">
 ↓ Order of Precedence (Lowest to Highest)
 
 +---------------------------------------------+
-| Variable defaults |
+|             Variable defaults               |
 +---------------------------------------------+
-| Environment Variables |
+|           Environment Variables             |
 +---------------------------------------------+
-| terraform.tfvars file |
+|           terraform.tfvars file             |
 +---------------------------------------------+
-| terraform.tfvars.json file |
+|         terraform.tfvars.json file          |
 +---------------------------------------------+
-| _.auto.tfvars or _.auto.tfvars.json |
+|    *.auto.tfvars or *.auto.tfvars.json      |
 +---------------------------------------------+
 | Command Line: -var and --var-file (Highest) |
 +---------------------------------------------+
-
 </pre>
-</p>
 
 ## Setting Variable Values via Environment Variables
 
@@ -84,5 +81,3 @@ This practical work demonstrates my ability to:
 - Troubleshoot and audit input precedence behaviors
 
 These skills are essential for delivering reliable and modular cloud infrastructure at scale.
-
----
