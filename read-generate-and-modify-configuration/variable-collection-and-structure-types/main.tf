@@ -175,11 +175,11 @@ resource "aws_key_pair" "generated_key" {
   public_key = tls_private_key.generated.public_key_openssh
 }
 
-resource "local_file" "private_key_pem" {
-  content         = tls_private_key.generated.private_key_pem
-  filename        = "MyAWSKey.pem"
-  file_permission = "0600"
-}
+# resource "local_file" "private_key_pem" {
+#   content         = tls_private_key.generated.private_key_pem
+#   filename        = "MyAWSKey.pem"
+#   file_permission = "0600"
+# }
 
 data "aws_ami" "amazon_linux" {
   most_recent = true
@@ -211,9 +211,9 @@ resource "aws_instance" "tf_mastery_ec2" {
     host        = self.public_ip
   }
 
-  provisioner "local-exec" {
-    command = "chmod 600 ${local_file.private_key_pem.filename}"
-  }
+  # provisioner "local-exec" {
+  #   command = "chmod 600 ${local_file.private_key_pem.filename}"
+  # }
 
   provisioner "remote-exec" {
     inline = [
@@ -227,10 +227,16 @@ resource "aws_instance" "tf_mastery_ec2" {
   tags = local.common_tags
 }
 
-module "server" {
-  source          = "./modules/server"
-  ami             = data.aws_ami.amazon_linux.id
-  subnet_id       = aws_subnet.tf_mastery_public.id
-  security_groups = [aws_security_group.tf_mastery_sg.id, aws_security_group.tf_mastery_web.id]
+# module "server" {
+#   source          = "./modules/server"
+#   ami             = data.aws_ami.amazon_linux.id
+#   subnet_id       = aws_subnet.tf_mastery_public.id
+#   security_groups = [aws_security_group.tf_mastery_sg.id, aws_security_group.tf_mastery_web.id]
 
+# }
+
+resource "aws_subnet" "list_subnet" {
+  vpc_id            = aws_vpc.tf_mastery_vpc.id
+  cidr_block        = var.ip["prod"]
+  availability_zone = var.us-east-1-azs[0]
 }
