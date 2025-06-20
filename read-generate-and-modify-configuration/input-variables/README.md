@@ -8,6 +8,8 @@ This project documents my direct implementation and testing of Terraform input v
 
 The following hierarchy illustrates how Terraform determines which value to assign when multiple sources are defined for a variable:
 
+<p align="center">
+
 ```text
 ↓ Order of Precedence (Lowest to Highest)
 
@@ -25,6 +27,8 @@ The following hierarchy illustrates how Terraform determines which value to assi
 | Command Line: -var and --var-file (Highest) |
 +---------------------------------------------+
 ```
+
+</p>
 
 ## Setting Variable Values via Environment Variables
 
