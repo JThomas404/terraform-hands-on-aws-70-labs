@@ -238,5 +238,5 @@ resource "aws_instance" "tf_mastery_ec2" {
 resource "aws_subnet" "list_subnet" {
   vpc_id            = aws_vpc.tf_mastery_vpc.id
   cidr_block        = each.value.ip
-  availability_zone = var.us-east-1-azs[0]
+  availability_zone = each.value.az
 }
