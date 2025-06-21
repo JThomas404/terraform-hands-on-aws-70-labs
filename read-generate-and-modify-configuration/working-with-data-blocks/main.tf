@@ -7,6 +7,30 @@ provider "aws" {
   }
 }
 
+locals {
+  team        = "api_mgmt_dev"
+  application = "corp_api"
+  server_name = "ec2-${var.environment}-api-${var.variables_sub_az}"
+}
+
+locals {
+  service_name = local.team
+  app_team     = "Cloud Team"
+  createdby    = "terraform"
+}
+
+locals {
+  # Common tags to be assigned to all resources
+  common_tags = {
+    Name      = local.server_name
+    Owner     = local.team
+    App       = local.application
+    Service   = local.service_name
+    AppTeam   = local.app_team
+    CreatedBy = local.createdby
+  }
+}
+
 # Retrieve the list of AZs in the current AWS region
 data "aws_availability_zones" "available" {}
 data "aws_region" "current" {}
@@ -31,30 +55,6 @@ resource "aws_iam_policy" "policy" {
       }
     ]
   })
-}
-
-locals {
-  team        = "api_mgmt_dev"
-  application = "corp_api"
-  server_name = "ec2-${var.environment}-api-${var.variables_sub_az}"
-}
-
-locals {
-  service_name = local.team
-  app_team     = "Cloud Team"
-  createdby    = "terraform"
-}
-
-locals {
-  # Common tags to be assigned to all resources
-  common_tags = {
-    Name      = local.server_name
-    Owner     = local.team
-    App       = local.application
-    Service   = local.service_name
-    AppTeam   = local.app_team
-    CreatedBy = local.createdby
-  }
 }
 
 # VPC and Internet Gateway
@@ -266,4 +266,3 @@ resource "aws_subnet" "list_subnet" {
   cidr_block        = each.value.ip
   availability_zone = each.value.az
 }
-
