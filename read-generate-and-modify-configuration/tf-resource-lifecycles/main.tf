@@ -152,6 +152,11 @@ resource "aws_security_group" "main" {
       cidr_blocks = ingress.value.cidr_blocks
     }
   }
+
+  lifecycle {
+    create_before_destroy = true
+    prevent_destroy       = true
+  }
 }
 
 resource "aws_security_group" "tf_mastery_sg" {
