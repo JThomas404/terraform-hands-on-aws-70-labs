@@ -64,7 +64,7 @@ resource "aws_iam_policy" "policy" {
 
 # VPC and Internet Gateway
 resource "aws_vpc" "tf_mastery_vpc" {
-  cidr_block = "10.0.0.0/16"
+  cidr_block = var.vpc_cidr
   tags       = var.tags
 }
 
@@ -78,7 +78,7 @@ resource "aws_subnet" "tf_mastery_public" {
   vpc_id                  = aws_vpc.tf_mastery_vpc.id
   cidr_block              = cidrsubnet(var.vpc_cidr, 8, each.value + 100)
   map_public_ip_on_launch = true
-  availability_zone       = "us-east-1a"
+  availability_zone       = tolist(data.aws_availability_zones.available.names)[each.value]
   tags                    = merge(var.tags, { Name = "${var.tags["Name"]}-public-subnet" })
 }
 
@@ -141,6 +141,7 @@ resource "aws_security_group" "main" {
   name = "core-sg"
 
   vpc_id = aws_vpc.tf_mastery_vpc.id
+
   dynamic "ingress" {
     for_each = var.web_ingress
     content {
