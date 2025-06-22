@@ -137,6 +137,23 @@ resource "aws_route_table_association" "tf_mastery_private" {
 }
 
 # Security Group
+resource "aws_security_group" "main" {
+  name = "core-sg"
+
+  vpc_id = aws_vpc.tf_mastery_vpc.id
+
+  dynamic "ingress" {
+    for_each = var.web_ingress
+    content {
+      description = ingress.value.description
+      from_port   = ingress.value.port
+      to_port     = ingress.value.port
+      protocol    = ingress.value.protocol
+      cidr_blocks = ingress.value.cidr_blocks
+    }
+  }
+}
+
 resource "aws_security_group" "tf_mastery_sg" {
   name        = "terraform-mastery-security-group"
   description = "Allow SSH"
@@ -266,8 +283,8 @@ resource "aws_instance" "tf_mastery_ec2" {
 
 # }
 
-resource "aws_subnet" "list_subnet" {
-  vpc_id            = aws_vpc.tf_mastery_vpc.id
-  cidr_block        = each.value.ip
-  availability_zone = each.value.az
-}
+# resource "aws_subnet" "list_subnet" {
+#   vpc_id            = aws_vpc.tf_mastery_vpc.id
+#   cidr_block        = each.value.ip
+#   availability_zone = each.value.az
+# }
