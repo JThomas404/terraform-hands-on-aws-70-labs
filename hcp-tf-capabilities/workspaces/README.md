@@ -1,4 +1,4 @@
-# Terraform Cloud Workspaces
+# Terraform Cloud - Workspaces
 
 ## Overview
 
