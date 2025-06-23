@@ -82,8 +82,6 @@ To enforce the policy set within Terraform Cloud:
 
 Trigger a plan in the `my-aws-app` workspace. A **Policy Check** stage will appear in the run.
 
-![Policy Check Passed](img/tfc_sentinel_run_passed.png)
-
 Navigate into the Policy Check section for detailed validation messages.
 
 ### Modify Terraform Configuration to Trigger Violation
